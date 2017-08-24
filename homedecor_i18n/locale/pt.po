@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-24 17:16+0200\n"
+"POT-Creation-Date: 2017-08-24 18:35+0200\n"
 "PO-Revision-Date: 2017-01-29 00:21-0200\n"
 "Last-Translator: Caiorrs <caiorrs@gmail.com>\n"
 "Language-Team: Brazilian Portuguese\n"
@@ -25,10 +25,6 @@ msgstr ""
 #, fuzzy
 msgid "Granite"
 msgstr "Granito"
-
-#: ../building_blocks/node_stairs.lua
-msgid "Fireplace"
-msgstr "Lareira"
 
 #: ../building_blocks/node_stairs.lua
 #, fuzzy, lua-format
@@ -80,6 +76,10 @@ msgstr "Vidro Sem Riscos"
 #, fuzzy
 msgid "Wood Framed Glass"
 msgstr "Vidro com Bordas de Madeira"
+
+#: ../building_blocks/other.lua
+msgid "Fireplace"
+msgstr "Lareira"
 
 #: ../building_blocks/other.lua
 #, fuzzy

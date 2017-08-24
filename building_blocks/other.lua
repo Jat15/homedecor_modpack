@@ -2,6 +2,22 @@ local S = homedecor_i18n.gettext
 
 -- Node
 
+minetest.register_node("building_blocks:Fireplace", {
+	description = S("Fireplace"),
+	tiles = {
+		"building_blocks_cast_iron.png",
+		"building_blocks_cast_iron.png",
+		"building_blocks_cast_iron.png",
+		"building_blocks_cast_iron_fireplace.png"
+	},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	light_source = default.LIGHT_MAX,
+	sunlight_propagates = true,
+	is_ground_content = true,
+	groups = {cracky=2},
+})
+
 minetest.register_node("building_blocks:terrycloth_towel", {
 	drawtype = "raillike",
 	description = S("Terrycloth towel"),

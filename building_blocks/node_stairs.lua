@@ -1,21 +1,5 @@
 local S = homedecor_i18n.gettext
 
-minetest.register_node("building_blocks:Fireplace", {
-	description = S("Fireplace"),
-	tiles = {
-		"building_blocks_cast_iron.png",
-		"building_blocks_cast_iron.png",
-		"building_blocks_cast_iron.png",
-		"building_blocks_cast_iron_fireplace.png"
-	},
-	paramtype = "light",
-	paramtype2 = "facedir",
-	light_source = default.LIGHT_MAX,
-	sunlight_propagates = true,
-	is_ground_content = true,
-	groups = {cracky=2},
-})
-
 function building_blocks_stairs(nodename, def)
 	
 	local mod = string.match (nodename,"(.+):")

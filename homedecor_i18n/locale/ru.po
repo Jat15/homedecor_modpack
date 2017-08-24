@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-24 17:16+0200\n"
+"POT-Creation-Date: 2017-08-24 18:35+0200\n"
 "PO-Revision-Date: 2017-08-21 16:17+0300\n"
 "Last-Translator: inpos <inpos@yandex.ru>\n"
 "Language-Team: \n"
@@ -22,10 +22,6 @@ msgstr ""
 #: ../building_blocks/alias.lua
 msgid "Granite"
 msgstr "Гранит"
-
-#: ../building_blocks/node_stairs.lua
-msgid "Fireplace"
-msgstr "Камин"
 
 #: ../building_blocks/node_stairs.lua
 #, fuzzy, lua-format
@@ -72,6 +68,10 @@ msgstr "Стекло без стыков"
 #: ../building_blocks/node_stairs.lua
 msgid "Wood Framed Glass"
 msgstr "Деревянное окно"
+
+#: ../building_blocks/other.lua
+msgid "Fireplace"
+msgstr "Камин"
 
 #: ../building_blocks/other.lua
 msgid "Terrycloth towel"
