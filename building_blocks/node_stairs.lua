@@ -1,6 +1,6 @@
 local S = homedecor_i18n.gettext
 
-function building_blocks_stairs(nodename, def)
+local function building_blocks_stairs(nodename, def)
 	
 	local mod = string.match (nodename,"(.+):")
 	local name = string.match (nodename,":(.+)")
@@ -30,7 +30,7 @@ function building_blocks_stairs(nodename, def)
 		bb_stairs = {}
 		
 		-- Node will be called stairs:stair_<subname>
-		function bb_stairs.register_stair(subname, recipeitem, groups, images, description)
+		function bb_stairs.register_stair(subname, recipeitem, groups, images, description, sound)
 			minetest.register_node("building_blocks:stair_" .. subname, {
 				description = description,
 				drawtype = "nodebox",
@@ -46,6 +46,7 @@ function building_blocks_stairs(nodename, def)
 						{-0.5, 0, 0, 0.5, 0.5, 0.5},
 					},
 				},
+				sounds = sound,
 			})
 
 			minetest.register_craft({
@@ -69,7 +70,7 @@ function building_blocks_stairs(nodename, def)
 		end
 
 		-- Node will be called stairs:slab_<subname>
-		function bb_stairs.register_slab(subname, recipeitem, groups, images, description)
+		function bb_stairs.register_slab(subname, recipeitem, groups, images, description, sound)
 			minetest.register_node("building_blocks:slab_" .. subname, {
 				description = description,
 				drawtype = "nodebox",
@@ -85,6 +86,7 @@ function building_blocks_stairs(nodename, def)
 					type = "fixed",
 					fixed = {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
 				},
+				sounds = sound,
 			})
 
 			minetest.register_craft({
@@ -96,16 +98,17 @@ function building_blocks_stairs(nodename, def)
 		end
 
 		-- Nodes will be called stairs:{stair,slab}_<subname>
-		function bb_stairs.register_stair_and_slab(subname, recipeitem, groups, images, desc_stair, desc_slab)
-			bb_stairs.register_stair(subname, recipeitem, groups, images, desc_stair)
-			bb_stairs.register_slab(subname, recipeitem, groups, images, desc_slab)
+		function bb_stairs.register_stair_and_slab(subname, recipeitem, groups, images, desc_stair, desc_slab, sound)
+			bb_stairs.register_stair(subname, recipeitem, groups, images, desc_stair, sound)
+			bb_stairs.register_slab(subname, recipeitem, groups, images, desc_slab, sound)
 		end
 	
 		bb_stairs.register_stair_and_slab(name,nodename,
 			def.groups,
 			def.tiles,
 			S("%s Stair"):format(S(def.description)),
-			S("%s Slab"):format(S(def.description))
+			S("%s Slab"):format(S(def.description)),
+			def.sounds
 		)
 		
 	end
