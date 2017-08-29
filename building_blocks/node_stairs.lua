@@ -1,15 +1,17 @@
 local S = homedecor_i18n.gettext
 
 local function building_blocks_stairs(nodename, def)
-	
-	local mod = string.match (nodename,"(.+):")
-	local name = string.match (nodename,":(.+)")
-	
 	minetest.register_node(nodename, def)
 
-	for i,groupname in ipairs(def.groups) do
-		if groupname == not("cracky") or not("choppy") or not("flammable") or not("crumbly") or not("snappy") then
-			table.remove(def[groups][groupname])
+	local mod, name = nodename:match("(.*):(.*)")
+	for groupname,value in pairs(def.groups) do
+		if	groupname ~= "cracky" and
+			groupname ~= "choppy" and
+			groupname ~="flammable" and
+			groupname ~="crumbly" and
+			groupname ~="snappy" 
+		then
+			def.groups.groupname = nil
 		end
     end
 	
