@@ -8,9 +8,8 @@ if minetest.get_modpath("moreblocks") or minetest.get_modpath("stairs") then
 end
 
 if minetest.get_modpath("moreblocks") then
-	stairsplus:register_alias_all("building_blocks", "tar", "building_blocks", "Tar")
-	stairsplus:register_alias_all("moreblocks", "tar", "building_blocks", "Tar")
 	stairsplus:register_alias_all("building_blocks", "marble", "building_blocks", "Marble")
+	stairsplus:register_alias_all("building_blocks", "tar", "building_blocks", "Tar")
 	for _, i in ipairs(stairsplus.shapes_list) do
 		local class = i[1]
 		local cut = i[2]
@@ -19,6 +18,7 @@ if minetest.get_modpath("moreblocks") then
 	end
 	minetest.unregister_item("moreblocks:tar")
 	minetest.register_alias("moreblocks:tar", "building_blocks:Tar")
+	stairsplus:register_alias_all("moreblocks", "tar", "building_blocks", "Tar")	
 end
 
 minetest.register_alias("adobe", "building_blocks:Adobe")
