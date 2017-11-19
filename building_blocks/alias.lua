@@ -9,6 +9,7 @@ end
 
 if minetest.get_modpath("moreblocks") then
 	stairsplus:register_alias_all("building_blocks", "tar", "building_blocks", "Tar")
+	stairsplus:register_alias_all("moreblocks", "tar", "building_blocks", "Tar")
 	stairsplus:register_alias_all("building_blocks", "marble", "building_blocks", "Marble")
 	for _, i in ipairs(stairsplus.shapes_list) do
 		local class = i[1]
